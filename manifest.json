@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "chatgpt folders",
+  "version": "1.4",
+  "description": "Modify the DOM on reactive websites",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": [
+        "scripts/popup.js",
+
+        "scripts/drag/dropzone.js",
+        "scripts/drag/drag.js",
+        "scripts/drag/helpers.js",
+        "scripts/drag/dropChat.js",
+        "scripts/drag/dropFolder.js",
+
+        "scripts/chatOptions.js",
+        "scripts/folderOptions.js",
+        "scripts/folderMenu.js",
+        "scripts/chatMenu.js",
+
+        "scripts/folders.js",
+        "scripts/startup.js",
+        "content.js"
+      ],
+      "css": ["style.css"],
+      "type": "module",
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["*://*/*"]
+}
