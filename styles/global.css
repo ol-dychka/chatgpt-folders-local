@@ -1,0 +1,107 @@
+.flex-between {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.styled-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 14px;
+  width: 100%;
+  color: var(--text-inactive-color);
+}
+
+.flex-between .styled-button {
+  width: auto;
+}
+
+.styled-button:hover {
+  background-color: var(--hover-color);
+  color: var(--text-color);
+}
+
+.inline-button {
+  color: var(--text-inactive-color);
+  font-weight: 700;
+  margin: 0 5px;
+}
+
+.inline-colored-button {
+  font-weight: 700;
+  margin: 0 5px;
+}
+
+.inline-button:hover {
+  color: var(--text-color);
+}
+
+.inline-text-button {
+  color: var(--text-inactive-color);
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.inline-colored-text-button {
+  font-size: 14px;
+  margin-left: auto;
+}
+
+.inline-colored-text-button:hover {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.inline-colored-button:hover {
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.inline-text-button:hover {
+  color: var(--text-color);
+}
+
+.styled-input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--input-color);
+}
+
+.styled-input:focus {
+  outline: none;
+}
+
+.styled-inline-input {
+  width: 100%;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+}
+
+.styled-inline-input:focus {
+  outline: none;
+}
+
+input[type="checkbox"]:checked {
+  color: var(--text-inactive-color);
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5rem;
+  background-color: var(--bg-color);
+  border: 2px solid var(--input-color);
+  cursor: pointer;
+  appearance: none; /* Remove default checkbox styles */
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"]:focus {
+  outline: none; /* Remove the focus outline */
+  -webkit-box-shadow: none; /* For WebKit (Chrome, Safari) */
+  box-shadow: none; /* Remove focus box-shadow */
+}
+
+ul > li:last-child {
+  margin-bottom: 0.25rem;
+}

@@ -10,7 +10,7 @@ async function createChatMenu(name, href, close) {
   };
 
   const chatMenuContainer = document.createElement("div");
-  chatMenuContainer.classList.add("chat-menu-container");
+  chatMenuContainer.classList.add("menu-container");
 
   const controls = document.createElement("div");
   controls.classList.add("flex-between");

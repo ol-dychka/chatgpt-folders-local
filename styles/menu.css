@@ -1,0 +1,26 @@
+.menu-container {
+  background-color: var(--bg-color);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu-label {
+  font-size: 14px;
+}
+
+.folder-menu-inputs {
+  margin: 0.5rem 0;
+}
+
+.folder-select-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.folder-select-header:hover {
+  background-color: var(--hover-color);
+}

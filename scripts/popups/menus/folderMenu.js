@@ -1,6 +1,6 @@
 function createFolderMenu(close) {
   const folderMenuContainer = document.createElement("div");
-  folderMenuContainer.classList.add("folder-menu-container");
+  folderMenuContainer.classList.add("menu-container");
 
   const controls = document.createElement("div");
   controls.classList.add("flex-between");

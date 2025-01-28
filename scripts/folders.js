@@ -68,7 +68,7 @@ function createChatNode(chat, folder) {
   const chatHeader = document.createElement("div");
 
   const chatText = document.createElement("div");
-  chatText.classList.add("chat-text");
+  chatText.classList.add("conversation-text");
   chatText.draggable = true;
 
   const link = document.createElement("a");

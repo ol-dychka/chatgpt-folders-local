@@ -23,9 +23,17 @@
 
         "scripts/folders.js",
         "scripts/startup.js",
+        "theme.js",
         "content.js"
       ],
-      "css": ["style.css"],
+      "css": [
+        "styles/variables.css",
+        "styles/global.css",
+        "styles/startup.css",
+        "styles/options.css",
+        "styles/folders.css",
+        "styles/menu.css"
+      ],
       "type": "module",
       "run_at": "document_end"
     }
