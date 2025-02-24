@@ -7,7 +7,7 @@ function createFolderNode(folder, chatsNode) {
   folderHeader.style.backgroundColor = folder.color;
   folderHeader.style.color = getContrastColor(folder.color);
 
-  const folderName = document.createElement("div");
+  const folderName = document.createElement("p");
   folderName.classList.add("folder-name");
   folderName.innerText = folder.name;
 
@@ -66,10 +66,8 @@ function createChatNode(chat, folder) {
   chatNode.style.position = "relative";
 
   const chatHeader = document.createElement("div");
-
-  const chatText = document.createElement("div");
-  chatText.classList.add("conversation-text");
-  chatText.draggable = true;
+  chatHeader.classList.add("conversation-text");
+  chatHeader.draggable = true;
 
   const link = document.createElement("a");
   link.href = chat.href;
@@ -86,13 +84,12 @@ function createChatNode(chat, folder) {
     )
   );
 
-  chatText.appendChild(link);
-  chatText.appendChild(optionsButton);
-  chatText.addEventListener("dragstart", (e) =>
+  chatHeader.appendChild(link);
+  chatHeader.appendChild(optionsButton);
+  chatHeader.addEventListener("dragstart", (e) =>
     handleDragChat(e, chat, folder)
   );
 
-  chatHeader.appendChild(chatText);
   chatNode.appendChild(chatHeader);
   const dropzone = createDropzone((e) => handleDropChat(e, folder.id, chat));
   chatNode.appendChild(dropzone);

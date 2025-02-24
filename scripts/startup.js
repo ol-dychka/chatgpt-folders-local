@@ -1,13 +1,18 @@
-// append "+" buttons to links
+// append "+" buttons to conversation "options" that appear on the side
 function appendButtonsToLinks() {
-  const links = document.querySelectorAll("li > div > a"); // Select all link elements
+  // Select all conversation options elements
+  const conversationSideOptions = document.querySelectorAll("li > div > div");
   // Check if button is already appended to avoid infinite loop
-  links.forEach((link) => {
-    if (!link.querySelector(".custom-button")) {
+  conversationSideOptions.forEach((option) => {
+    if (!option.querySelector(".custom-button")) {
       const button = document.createElement("button");
       button.innerText = "+";
       button.classList.add("add-chat-button", "inline-button");
       button.classList.add("custom-button");
+
+      // get "a" element which is a link element containing href
+      // and div with conversation name
+      const link = option.parentElement.firstChild;
 
       button.addEventListener("click", (e) => {
         e.preventDefault();
@@ -18,7 +23,7 @@ function appendButtonsToLinks() {
         );
       });
 
-      link.appendChild(button);
+      option.appendChild(button);
     }
   });
 }

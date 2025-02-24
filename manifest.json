@@ -1,14 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "chatgpt folders",
-  "version": "1.4",
-  "description": "Modify the DOM on reactive websites",
+  "name": "ChatGPT Folders",
+  "version": "1.0",
+  "description": "Create folders within ChatGPT interface and organize your conversations.",
   "permissions": ["activeTab", "scripting", "storage"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
   "content_scripts": [
     {
       "matches": ["https://chatgpt.com/*"],
       "js": [
-        "scripts/popup.js",
+        "scripts/popups/popup.js",
 
         "scripts/drag/dropzone.js",
         "scripts/drag/drag.js",
@@ -16,10 +21,10 @@
         "scripts/drag/dropChat.js",
         "scripts/drag/dropFolder.js",
 
-        "scripts/chatOptions.js",
-        "scripts/folderOptions.js",
-        "scripts/folderMenu.js",
-        "scripts/chatMenu.js",
+        "scripts/popups/options/chatOptions.js",
+        "scripts/popups/options/folderOptions.js",
+        "scripts/popups/menus/folderMenu.js",
+        "scripts/popups/menus/chatMenu.js",
 
         "scripts/folders.js",
         "scripts/startup.js",
@@ -39,7 +44,12 @@
     }
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
