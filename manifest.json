@@ -54,5 +54,5 @@
   "background": {
     "service_worker": "background.js"
   },
-  "host_permissions": ["*://*/*"]
+  "host_permissions": ["https://chatgpt.com/*"]
 }
