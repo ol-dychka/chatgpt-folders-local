@@ -49,7 +49,7 @@ async function dropFolderToFolder(e, destinationFolderId) {
   folders = removeFolderFromFolders(folders, draggedFolderId);
 
   folders = addFolderToFolders(folders, destinationFolderId, folder);
-  console.log(folders);
+  // console.log(folders);
 
   chrome.storage.local.set({ folders: folders });
 }

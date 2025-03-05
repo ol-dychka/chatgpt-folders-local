@@ -62,7 +62,7 @@ async function handleAddFolder(name, color) {
 function generateHexCode() {
   const res =
     "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0");
-  console.log(res);
+  // console.log(res);
   return res;
 }
 

@@ -33,7 +33,7 @@ function appendButtonsToLinks() {
 let isRunning = false;
 async function appendFolders() {
   if (isRunning) return;
-  console.log("fld running");
+  // console.log("fld running");
 
   try {
     isRunning = true;
@@ -42,11 +42,11 @@ async function appendFolders() {
 
     if (!target.querySelector(".folders")) {
       const folders = await getFolders();
-      console.log(folders);
+      // console.log(folders);
       target.insertBefore(folders, target.firstChild);
     }
   } catch (err) {
-    console.log(err);
+    // console.log(err);
   } finally {
     isRunning = false;
   }

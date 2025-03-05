@@ -11,7 +11,7 @@ async function attachPopup(createPopup, e) {
   // click outside popup
   const outsideClickListener = (e) => {
     if (!popup.contains(e.target)) {
-      console.log(e.clientY);
+      // console.log(e.clientY);
       close();
     }
   };

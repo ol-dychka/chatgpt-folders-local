@@ -66,7 +66,7 @@ async function dropChatInSameFolder(folderId, draggedChat, destinationChat) {
     (chat) => chat.href === destinationChat?.href
   );
   if (destinationIndex < 0) destinationIndex = folder.length;
-  console.log(destinationIndex);
+  // console.log(destinationIndex);
   folder.splice(destinationIndex, 0, draggedChat);
 
   chrome.storage.local.set({

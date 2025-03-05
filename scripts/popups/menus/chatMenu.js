@@ -43,7 +43,7 @@ async function createChatMenu(name, href, close) {
   addChatButton.textContent = "Add Chat";
 
   addChatButton.addEventListener("click", () => {
-    console.log(selectedFolders);
+    // console.log(selectedFolders);
     handleAddChat(name, href, selectedFolders);
     close();
   });
