@@ -66,7 +66,7 @@ function createFolderList(
     folderSelectHeader.classList.add("folder-select-header");
 
     const checkbox = document.createElement("input");
-    checkbox.classList.add("styled-checkbox");
+    // checkbox.classList.add("styled-checkbox");
     checkbox.type = "checkbox";
     checkbox.addEventListener("click", () => {
       if (checkbox.checked) addToSelected(folder.id);

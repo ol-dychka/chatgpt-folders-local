@@ -1,7 +1,7 @@
 // append "+" buttons to conversation "options" that appear on the side
 function appendButtonsToLinks() {
   // Select all conversation options elements
-  const conversationSideOptions = document.querySelectorAll("li > div > div");
+  const conversationSideOptions = document.querySelectorAll("div > aside > a");
   // Check if button is already appended to avoid infinite loop
   conversationSideOptions.forEach((option) => {
     if (!option.querySelector(".custom-button")) {
@@ -12,17 +12,21 @@ function appendButtonsToLinks() {
 
       // get "a" element which is a link element containing href
       // and div with conversation name
-      const link = option.parentElement.firstChild;
 
       button.addEventListener("click", (e) => {
         e.preventDefault();
         attachPopup(
           (close) =>
-            createChatMenu(link.firstChild.innerText, link.href, close),
+            createChatMenu(
+              option.firstChild.firstChild.textContent,
+              option.href,
+              close
+            ),
           e
         );
       });
 
+      // console.log(option);
       option.appendChild(button);
     }
   });
@@ -38,7 +42,8 @@ async function appendFolders() {
   try {
     isRunning = true;
     const nav = document.querySelector("nav");
-    const target = nav.getElementsByTagName("div")[2];
+    const target = nav;
+    // const target = nav.getElementsByTagName("div")[2];
 
     if (!target.querySelector(".folders")) {
       const folders = await getFolders();

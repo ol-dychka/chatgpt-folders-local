@@ -28,10 +28,9 @@
 }
 
 .folders-label {
-  font-weight: 600;
-  font-size: 12px;
+  color: var(--section-color);
   margin-bottom: 5px;
-  margin-left: 6px;
+  margin-left: 10px;
 }
 
 .toggle-open-button-rotated {

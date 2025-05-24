@@ -140,7 +140,7 @@ async function getFolders() {
     foldersNode.appendChild(folderNode);
   });
 
-  foldersContainer.appendChild(foldersLabel);
+  // foldersContainer.appendChild(foldersLabel);
   foldersContainer.appendChild(foldersNode);
   foldersContainer.appendChild(createFolderButton);
 
