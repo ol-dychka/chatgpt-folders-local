@@ -1,7 +1,7 @@
 // append "+" buttons to conversation "options" that appear on the side
 function appendButtonsToLinks() {
   // Select all conversation options elements
-  const conversationSideOptions = document.querySelectorAll("div > aside > a");
+  const conversationSideOptions = document.querySelectorAll("#history > a");
   // Check if button is already appended to avoid infinite loop
   conversationSideOptions.forEach((option) => {
     if (!option.querySelector(".custom-button")) {

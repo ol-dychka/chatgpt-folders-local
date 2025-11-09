@@ -1,6 +1,7 @@
 // this function takes theme as an argument and adjust chat, button and text colors
 
-function setTheme(theme) {
+function setTheme(themeClass) {
+  const theme = themeClass.split(" ")[0];
   if (theme === "dark") {
     document.documentElement.style.setProperty("--hover-color", "#212121");
     document.documentElement.style.setProperty("--text-color", "#ececec");
